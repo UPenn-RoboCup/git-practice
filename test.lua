@@ -13,7 +13,7 @@ end
 function test_add_negative()
   result=calculator.calculate(1,-3,calculator.add);
   assert_equal('number',type(result));
-  assert_equal(2,result);
+  assert_equal(-2,result);
 end
 
 function test_add_real()
