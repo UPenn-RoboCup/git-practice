@@ -1,0 +1,13 @@
+This is a dummy repository for practicing merging and resolving conflicts
+
+You should fork this directory, merge the branches "documentation" and
+"functionality" into "master", and then push your changes to your own github
+account. What you will submit is a link to the repository on your github
+account. Make sure the project is public!
+
+You will need to resolve merge conflicts for this assignment. When you are
+finished, go ahead and execute "supertester.lua"
+
+>lua supertester.lua
+
+All tests should pass.
