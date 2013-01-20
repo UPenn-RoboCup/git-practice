@@ -1,4 +1,4 @@
-module(...,package.seeall);
+module(..., package.seeall);
 
 require('math')
 
@@ -7,9 +7,27 @@ subtract=2;
 multiply=3
 divide=4;
 modulus=5;
-sin=6;
-cos=7;
 
 function calculate(first,second,operator)
+  --Code goes in here
+end
+
+function add_cal(first,second)
+  --Code goes in here
+end
+
+function subtract_cal(first,second)
+  --Code goes in here
+end
+
+function multiply_cal(first,second)
+  --Code goes in here
+end
+
+function divide_cal(first,second)
+  --Code goes in here
+end
+
+function modulus_cal(first,second)
   --Code goes in here
 end
