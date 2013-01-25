@@ -15,7 +15,7 @@ function test_add()
 end
 
 function test_add_non_number()
-  if not pcall(calculator.calculate,1,string,calculator.add) then
+  if pcall(calculator.calculate,1,string,calculator.add) then
     fail("Add did not fail on incorrect input!");
   end
 end
@@ -51,7 +51,7 @@ function test_subtract_real()
 end
 
 function test_subtract_non_number()
-  if not pcall(calculator.calculate,1,string,calculator.subtract) then
+  if pcall(calculator.calculate,1,string,calculator.subtract) then
     fail("Subtract did not fail on incorrect input!");
   end
 end
@@ -75,7 +75,7 @@ function test_multiply_real()
 end
 
 function test_multiply_non_number()
-  if not pcall(calculator.calculate,1,string,calculator.multiply) then
+  if pcall(calculator.calculate,1,string,calculator.multiply) then
     fail("Multiply did not fail on incorrect input!");
   end
 end
@@ -87,7 +87,7 @@ function test_divide()
 end
 
 function test_divide_non_number()
-  if not pcall(calculator.calculate,1,string,calculator.divide) then
+  if pcall(calculator.calculate,1,string,calculator.divide) then
     fail("Divide did not fail on incorrect input!");
   end
 end
@@ -99,7 +99,7 @@ function test_modulus()
 end
 
 function test_modulus_non_number()
-  if not pcall(calculator.calculate,1,string,calculator.modulus) then
+  if pcall(calculator.calculate,1,string,calculator.modulus) then
     fail("Modulus did not fail on incorrect input!");
   end
 end
