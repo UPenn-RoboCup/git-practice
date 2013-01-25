@@ -6,8 +6,8 @@ account. What you will submit is a link to the repository on your github
 account. Make sure the project is public!
 
 You will need to resolve merge conflicts for this assignment. When you are
-finished, go ahead and execute "supertester.lua"
+finished, go ahead and execute the following.
 
->lua supertester.lua
+>test/lunit test.lua
 
 All tests should pass.

@@ -3,11 +3,21 @@ require('calculator');
 
 module("test",lunit.testcase,package.seeall);
 
+function setup()
+  string="Hi there"
+  boolean=true
+end
 
 function test_add()
   result=calculator.calculate(1,3,calculator.add);
   assert_equal('number',type(result));
   assert_equal(4,result);
+end
+
+function test_add_non_number()
+  if not pcall(calculator.calculate,1,string,calculator.add) then
+    fail("Add did not fail on incorrect input!");
+  end
 end
 
 function test_add_negative()
@@ -40,6 +50,12 @@ function test_subtract_real()
   assert_equal(-2.5,result);
 end
 
+function test_subtract_non_number()
+  if not pcall(calculator.calculate,1,string,calculator.subtract) then
+    fail("Subtract did not fail on incorrect input!");
+  end
+end
+
 function test_multiply()
   result=calculator.calculate(2,3,calculator.multiply);
   assert_equal('number',type(result));
@@ -58,10 +74,22 @@ function test_multiply_real()
   assert_equal(7,result);
 end
 
+function test_multiply_non_number()
+  if not pcall(calculator.calculate,1,string,calculator.multiply) then
+    fail("Multiply did not fail on incorrect input!");
+  end
+end
+
 function test_divide()
   result=calculator.calculate(100,2,calculator.divide);
   assert_equal('number',type(result));
   assert_equal(50,result);
+end
+
+function test_divide_non_number()
+  if not pcall(calculator.calculate,1,string,calculator.divide) then
+    fail("Divide did not fail on incorrect input!");
+  end
 end
 
 function test_modulus()
@@ -69,3 +97,10 @@ function test_modulus()
   assert_equal('number',type(result));
   assert_equal(1,result);
 end
+
+function test_modulus_non_number()
+  if not pcall(calculator.calculate,1,string,calculator.modulus) then
+    fail("Modulus did not fail on incorrect input!");
+  end
+end
+
