@@ -48,7 +48,7 @@ function calculate(first,second,operator)
   elseif operator==modulus then
     return modulus_cal(first,second);
   else
-    return nil;
+    error("Operator not found!");
   end
 end
 
